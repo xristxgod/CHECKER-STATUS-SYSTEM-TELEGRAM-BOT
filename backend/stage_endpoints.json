@@ -1,0 +1,252 @@
+[
+  {
+    "url": "{domain_bank}/api/health/check/isWork",
+    "title": "Доступность банка",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "0.status=str_up",
+      "1.connection=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": "Bearer adminGYzYjE1ZDhmZmU0YzIwMWZjOTRkN2NkYjMzZmI0MDQ4NDY0NjgwZWQwZDdkODQ1MzljMGNlYWY4ZWE0ZA"
+  }, {
+    "url": "{domain_bank}/api/health/check/cronJob",
+    "title": "Статус работы cron jobs",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "checkResponse.cronJobDayReport=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": "Bearer adminGYzYjE1ZDhmZmU0YzIwMWZjOTRkN2NkYjMzZmI0MDQ4NDY0NjgwZWQwZDdkODQ1MzljMGNlYWY4ZWE0ZA"
+  }, {
+    "url": "{domain_bank}/api/health/check/{{btc||bnb||tron}}/timeUpdate",
+    "title": "Обновление курсов валют",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "checkResponse.LastTimeEntryExchangeCheck=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": "Bearer adminGYzYjE1ZDhmZmU0YzIwMWZjOTRkN2NkYjMzZmI0MDQ4NDY0NjgwZWQwZDdkODQ1MzljMGNlYWY4ZWE0ZA"
+  }, {
+    "url": "{domain_bsc_api}",
+    "title": "Соединение с BSC API и нодой",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_bsc_api}/is-node-alive",
+    "title": "Соединение с BSC нодой",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_bsc_api}/is-demon-alive",
+    "title": "BSC демон",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_bsc_api}/is-balancer-alive",
+    "title": "BSC balancer",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_bsc_api}/is-native-currency",
+    "title": "Баланс BSC кошелька",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_btc_api}",
+    "title": "Соединение с BTC API и нодой",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_btc_api}/is-node-alive",
+    "title": "Соединение с BTC нодой",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_btc_api}/is-demon-alive",
+    "title": "BTC демон",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_tron_api}",
+    "title": "Соединение с TRON API",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_tron_api}/is-node-alive",
+    "title": "Соединение с TRON нодой",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_tron_api}/is-native-currency",
+    "title": "Баланс TRON кошелька",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_tron_api}/is-demon-alive",
+    "title": "TRON демон",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "{domain_tron_api}/is-balancer-alive",
+    "title": "TRON balancer",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": [
+      "message=bool_true"
+    ],
+    "headers": null,
+    "result_status": null,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "https://auth.mangobanking.com/",
+    "title": "Страница авторизации",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": null,
+    "headers": {"content-type": "text/html"},
+    "result_status": 200,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }, {
+    "url": "https://lc.mangobanking.com/",
+    "title": "Страница авторизации",
+    "tag": "crypto",
+    "method": "get",
+    "json_query": null,
+    "headers": null,
+    "result_status": 200,
+    "delay_success": 180,
+    "delay_error": 15,
+    "data_for_check": null,
+    "auth": null
+  }
+]

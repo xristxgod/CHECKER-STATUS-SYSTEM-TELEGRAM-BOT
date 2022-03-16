@@ -1,0 +1,17 @@
+version: '2.2'
+
+services:
+  backend:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    container_name: test_bot_bank_api_checker
+    entrypoint: python main.py
+    env_file:
+      - ./.test.env
+    networks:
+      - test_bot_bank_api_checker_net
+
+networks:
+  test_bot_bank_api_checker_net:
+    driver: bridge
