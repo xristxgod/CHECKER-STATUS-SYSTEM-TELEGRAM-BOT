@@ -20,7 +20,7 @@ Here you can write params for our services' health checking.
     ],
     "delay": 5,
     "data_for_check": null,
-    "auth": "Bearer adminGYzYjE1ZDhmZmU0YzIwMWZjOTRkN2NkYjMzZmI0MDQ4NDY0NjgwZWQwZDdkODQ1MzljMGNlYWY4ZWE0ZA"
+    "auth": "Bearer adminGYzYjE1ZDhmZmU0YzIwMWZjOTRkN2NxadtxuyI0MDQ4NDY0NjgwZWQwZDdkODQ1MzljMGNlYWY4ZWE0ZA"
   },
 
 ...
