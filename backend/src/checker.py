@@ -46,14 +46,18 @@ async def __check_result(data, query_list):
                     return await __check_result(data[int(field)], query_list[1:])
                 else:
                     return await __check_result(data[field], query_list[1:])
-    except:
+    except Exception as e:
+        logger.error(f'ERROR: {e}. DATA: {data}. QUERY: {query_list}')
         return False
 
 
 async def check_result(data, queries):
     if len(queries) == 0 or queries is None:
         return True
-    return all([await __check_result(data, q.split('.')) for q in queries])
+    result = all([await __check_result(data, q.split('.')) for q in queries])
+    if not result:
+        logger.error(f'NEW: {data}. QUERY: {queries}')
+    return result
 
 
 async def __request_status(
