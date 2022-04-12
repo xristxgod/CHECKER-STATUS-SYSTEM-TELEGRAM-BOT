@@ -1,5 +1,8 @@
 #How it works?
 
+>START PROD: docker-compose --file prod-docker-compose.yml up --build
+
+>START DEV: docker-compose --file dev-docker-compose.yml up --build
 
 There is a file `stage_endpoints.json`.
 

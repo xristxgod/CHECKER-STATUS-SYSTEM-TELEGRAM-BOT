@@ -5,13 +5,13 @@ services:
     build:
       context: backend/
       dockerfile: Dockerfile
-    container_name: test_bot_bank_api_checker
+    container_name: dev_bot_bank_api_checker
     entrypoint: python main.py
     env_file:
-      - ./.test.env
+      - ./.de.env
     networks:
-      - test_bot_bank_api_checker_net
+      - dev_bot_bank_api_checker_net
 
 networks:
-  test_bot_bank_api_checker_net:
+  dev_bot_bank_api_checker_net:
     driver: bridge
